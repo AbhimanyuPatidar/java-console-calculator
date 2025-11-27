@@ -11,7 +11,7 @@ public class CLICalculator {
         do {
             command = scan.nextLine();
 
-        } while (command.equals(QUIT_CMD));
+        } while (!command.equals(QUIT_CMD));
 
         scan.close();
     }
