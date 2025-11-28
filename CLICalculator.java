@@ -29,9 +29,11 @@ public class CLICalculator {
                     num1 = Double.parseDouble(num1String);
                     num2 = Double.parseDouble(num2String);
                 } catch (NumberFormatException nfe) {
-                    System.out.println(nfe.getMessage());
+                    System.out.println("\nAtleast one of the two inputs is not a number, kindly try again!\n");
+                    continue;
                 } catch (Exception e) {
                     e.printStackTrace();
+                    continue;
                 }
 
                 switch (command) {
@@ -115,7 +117,7 @@ public class CLICalculator {
                         System.out.println("Invalid command entered, please try again!\n");
                 }
             } else {
-                System.out.println("Sorry to see you go :(\n");
+                System.out.println("Sorry to see you go :(");
             }
         } while (!command.equals(QUIT_CMD));
 
